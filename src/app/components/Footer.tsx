@@ -1,14 +1,21 @@
-import { Container, Text, Box, Group } from '@mantine/core';
+import { Container, Text, Box, Group, Divider } from '@mantine/core';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <Box component="footer" mt="xl" py="lg">
+       <Divider my="md" />
       <Container size="lg">
-        <Group justify="center">
+        <Group justify="center" gap="xs">
           <Text size="sm" c="dimmed">
             © {currentYear} AzdusMMA. Wszelkie prawa zastrzeżone.
+          </Text>
+          <Text size="sm" c="dimmed">
+            •
+          </Text>
+          <Text size="sm" c="dimmed">
+            Created by Bialymodelu
           </Text>
         </Group>
       </Container>
