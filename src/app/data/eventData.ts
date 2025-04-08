@@ -105,7 +105,7 @@ export const fights: Fight[] = [
         name: 'Healthy14',
         image: '/images/fighter6.jpg',
         age: 15,
-        height: 150,
+        height: 151,
         reach: 182,
         weight: 72,
         record: '2-1-0',
