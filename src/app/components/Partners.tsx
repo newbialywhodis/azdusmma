@@ -1,4 +1,4 @@
-import { Title, SimpleGrid, Image, Box, Anchor, Paper } from '@mantine/core';
+import { Title, Flex, Image, Box, Anchor, Paper } from '@mantine/core';
 import { partners } from '../data/eventData';
 
 export function Partners() {
@@ -11,10 +11,11 @@ export function Partners() {
       <Title order={2} ta="center" mb="xl">
         Partnerzy Wydarzenia
       </Title>
-      <SimpleGrid
-        cols={{ base: 2, sm: 3, md: 4, lg: 5 }}
-        spacing="xl"
-        verticalSpacing="xl"
+      <Flex
+        gap="xl"
+        justify="center"
+        align="center"
+        wrap="wrap"
       >
         {partners.map((partner) => {
           const partnerLogo = (
@@ -22,11 +23,28 @@ export function Partners() {
               src={partner.logoUrl}
               alt={`Logo ${partner.name}`}
               h={60}
+              mah={60}
               w="auto"
+              maw="150px"
               fit="contain"
               fallbackSrc="/images/placeholder-logo.png"
             />
           );
+
+          const containerStyles = {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minWidth: '120px',
+            padding: 'var(--mantine-spacing-sm)',
+            filter: 'grayscale(1)',
+            opacity: 0.7,
+            transition: 'filter 0.2s, opacity 0.2s',
+          };
+
+          const hoverStyles = {
+             '&:hover': { filter: 'grayscale(0)', opacity: 1 }
+          }
 
           return partner.linkUrl ? (
             <Anchor
@@ -34,19 +52,18 @@ export function Partners() {
               target="_blank"
               rel="noopener noreferrer"
               key={partner.name}
-              display="block"
-              style={{ filter: 'grayscale(1)', opacity: 0.7, transition: 'filter 0.2s, opacity 0.2s' }}
-              styles={{
-                root: { '&:hover': { filter: 'grayscale(0)', opacity: 1 } },
-              }}
+              style={containerStyles}
+              styles={{ root: hoverStyles }}
             >
               {partnerLogo}
             </Anchor>
           ) : (
-            <Box key={partner.name} style={{ filter: 'grayscale(1)', opacity: 0.7 }}>{partnerLogo}</Box>
+            <Box key={partner.name} style={containerStyles}>
+              {partnerLogo}
+            </Box>
           );
         })}
-      </SimpleGrid>
+      </Flex>
     </Paper>
   );
 }

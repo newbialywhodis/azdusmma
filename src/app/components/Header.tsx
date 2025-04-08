@@ -6,7 +6,7 @@ import { eventDetails } from '../data/eventData';
 
 export function Header() {
   return (
-    <Box component="header" py="sm">
+    <Box component="header">
       <Container fluid p={'md'}>
         <Group justify="space-between">
           <Text size="xl" fw={700} >

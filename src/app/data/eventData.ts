@@ -118,4 +118,5 @@ export const fights: Fight[] = [
 
 export const partners: Partner[] = [
   { name: 'FORTUNA', logoUrl: '/images/partners/fortuna-logo.jpg', linkUrl: 'https://www.efortuna.pl/' },
+  { name: 'DZIK', logoUrl: '/images/partners/wk-logo.png', linkUrl: 'https://wkdzik.pl/' },
 ];

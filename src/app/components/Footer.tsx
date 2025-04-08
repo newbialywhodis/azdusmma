@@ -4,7 +4,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Box component="footer" mt="xl" py="lg">
+    <Box component="footer" py="lg">
        <Divider my="md" />
       <Container size="lg">
         <Group justify="center" gap="xs">

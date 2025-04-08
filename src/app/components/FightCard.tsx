@@ -102,9 +102,9 @@ export default function FightCard({ fight }: FightCardProps) {
         >
           <Stack gap="sm" w="100%">
             <StatRow label="WIEK" value1={fight.fighter1.age} value2={fight.fighter2.age} />
-            <StatRow label="WZROST" value1={fight.fighter1.height} value2={fight.fighter2.height} unit=" cm" />
-            <StatRow label="ZASIĘG" value1={fight.fighter1.reach} value2={fight.fighter2.reach} unit=" cm" />
-            <StatRow label="WAGA" value1={fight.fighter1.weight} value2={fight.fighter2.weight} unit=" kg" />
+            <StatRow label="WZROST [CM]" value1={fight.fighter1.height} value2={fight.fighter2.height} unit=" cm" />
+            <StatRow label="ZASIĘG [CM]" value1={fight.fighter1.reach} value2={fight.fighter2.reach} unit=" cm" />
+            <StatRow label="WAGA [KG]" value1={fight.fighter1.weight} value2={fight.fighter2.weight} unit=" kg" />
             <StatRow label="STATYSTYKA" value1={fight.fighter1.record} value2={fight.fighter2.record} />
           </Stack>
         </Grid.Col>
