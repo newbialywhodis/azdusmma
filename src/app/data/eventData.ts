@@ -32,7 +32,7 @@ export interface EventDetails {
 }
 
 export const eventDetails: EventDetails = {
-  title: 'SigMMA: Gala Azdusa & Trenera Smokowskiego',
+  title: 'SigMMA: Gala streamera Azdusa & Pięściarza Maćka Smokowskiego',
   date: '2025-04-27T21:00:00',
   streamer: 'Azdus',
   streamPlatform: 'Kick',
@@ -97,8 +97,8 @@ export const fights: Fight[] = [
   },
     {
     id: 4,
-    fighter1: { name: 'Zawodnik A', image: '/images/placeholder.png' },
-    fighter2: { name: 'Zawodnik B', image: '/images/placeholder.png' },
+    fighter1: { name: 'Zerox', image: '/images/placeholder.png' },
+    fighter2: { name: 'Ambasador Bidula', image: '/images/placeholder.png' },
     category: 'KICKBOXING',
     status: 'Cancelled',
   },
