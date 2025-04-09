@@ -8,8 +8,8 @@ export function Organizers() {
 
   return (
     <Box mt="xl">
-      <Title order={2} ta="center" mb="xl">
-        Organizatorzy
+      <Title order={1} ta="center" mb="lg">
+      Organizatorzy
       </Title>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
         {organizers.map((organizer) => (

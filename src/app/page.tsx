@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: eventDetails.title,
       description: eventDetails.description,
-      url: 'https://twoja-domena.pl',
+      url: 'https://azdusmma.vercel.app/',
       type: 'website',
     },
     twitter: {
@@ -28,7 +28,7 @@ export default function GalaPage() {
   return (
     <Stack gap="xl">
       <HeroSection event={eventDetails} />
-      <Divider my="md" />
+      <Divider />
       <Organizers />
       <FightList fights={fights} />
       <Divider my="md" />

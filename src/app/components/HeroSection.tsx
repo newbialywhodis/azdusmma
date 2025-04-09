@@ -33,7 +33,7 @@ export default function HeroSection({ event }: HeroSectionProps) {
                     rel="noopener noreferrer"
                     fw={600}
                     underline="hover"
-                    c="blue.4"
+                    c="red.4"
                   >
                   {event.streamer} na {event.streamPlatform}
                 </Anchor>

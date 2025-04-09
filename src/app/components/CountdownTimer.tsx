@@ -58,7 +58,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
   return (
     <Stack align="center" gap="xs" mt="lg">
-       <Title order={3} c="dimmed">Start za:</Title>
+       <Title order={3} c="red">Start za:</Title>
         <Group gap="xs" justify="center">
             <Box ta="center">
                 <Text fz={32} fw={700}>{formatTime(timeLeft.days)}</Text>

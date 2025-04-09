@@ -1,14 +1,15 @@
 .title {
     font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.1;
-    background: linear-gradient(80deg, var(--mantine-color-blue-filled), var(--mantine-color-cyan-filled));
+    background: linear-gradient(80deg, var(--mantine-color-red-filled), var(--mantine-color-pink-filled));
     -webkit-background-clip: text;
+    padding-bottom: 0.1em;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .largeCountdown {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   
   @media (max-width: 768px) {

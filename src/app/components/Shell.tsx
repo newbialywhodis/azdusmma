@@ -11,10 +11,10 @@ interface ShellProps {
 
 export default function Shell({ children }: ShellProps) {
   return (
-    <Box style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box style={{ display: 'flex', flexDirection: 'column'}}>
       <Header />
       <Box component="main" style={{ flexGrow: 1 }}>
-        <Container size="lg" py="md">
+        <Container size="xl">
           {children}
         </Container>
       </Box>
