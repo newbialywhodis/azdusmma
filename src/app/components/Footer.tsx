@@ -9,7 +9,7 @@ export function Footer() {
       <Container size="lg">
         <Group justify="center" gap="xs">
           <Text size="sm" c="dimmed">
-            © {currentYear} AzdusMMA. Wszelkie prawa zastrzeżone.
+            © {currentYear} SigMMA. Wszelkie prawa zastrzeżone.
           </Text>
           <Text size="sm" c="dimmed">
             •
