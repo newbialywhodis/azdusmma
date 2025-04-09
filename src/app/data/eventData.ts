@@ -46,6 +46,14 @@ export interface Partner {
   linkUrl?: string;
 }
 
+export interface Organizer {
+  name: string;
+  alias?: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+}
+
 export const fights: Fight[] = [
   {
     id: 1,
@@ -114,4 +122,21 @@ export const fights: Fight[] = [
 export const partners: Partner[] = [
   { name: 'FORTUNA', logoUrl: '/images/partners/fortuna-logo.jpg', linkUrl: 'https://www.efortuna.pl/' },
   { name: 'DZIK', logoUrl: '/images/partners/wk-logo.png', linkUrl: 'https://wkdzik.pl/' },
+];
+
+export const organizers: Organizer[] = [
+  {
+    name: 'Jakub Matowicki',
+    alias: 'Azdus',
+    title: 'Streamer / Organizator',
+    description: 'Streamer działający pod pseudonimem "Azdus", główny inicjator i organizator gali SigMMA, gromadzący wokół siebie społeczność zainteresowaną sportami walki.',
+    imageUrl: '/images/azdus.jpg'
+  },
+  {
+    name: 'Maciej Smokowski',
+    alias: 'Trener',
+    title: 'Zawodowy pięściarz / Organizator',
+    description: 'Doświadczony pięściarz i Trener Klubu Emes Boxing. Współorganizator gali SigMMA, odpowiedzialny za aspekty sportowe i profesjonalne przygotowanie zawodników.',
+    imageUrl: '/images/smokowski.jpg'
+  },
 ];
