@@ -32,12 +32,12 @@ export interface EventDetails {
 }
 
 export const eventDetails: EventDetails = {
-  title: 'Gala Bokserska Azdusa',
+  title: 'SigMMA: Gala Azdusa & Trenera Smokowskiego',
   date: '2025-04-27T21:00:00',
   streamer: 'Azdus',
   streamPlatform: 'Kick',
   streamUrl: 'https://kick.com/azdus',
-  description: 'Niezapomniane starcia znanych osobistości i przyjaciół Azdusa. Oglądaj na żywo, za darmo!',
+  description: 'Pierwsza edycja gali SigMMA organizowanej przez streamera Azdusa oraz zawodowego pięściarza Macieja Smokowskiego. Niezapomniane starcia influencerów i przyjaciół, oglądaj na żywo za darmo na Kick!',
 };
 
 export interface Partner {

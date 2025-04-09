@@ -10,7 +10,7 @@ export function Header() {
       <Container fluid p={'md'}>
         <Group justify="space-between">
           <Text size="xl" fw={700} >
-            AZDUSMMA
+            SigMMA
           </Text>
           <Button
             component="a"
