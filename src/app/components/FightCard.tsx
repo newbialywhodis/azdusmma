@@ -14,8 +14,9 @@ interface FighterDisplayProps {
 function FighterDisplay({ fighter, fightStatus, isWinner }: FighterDisplayProps) {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  const avatarSize = isMobile ? 100 : 120;
+  const avatarSize = isMobile ? 120 : 140;
   const nameTextSize = isMobile ? 'sm' : 'lg';
+  const realNameTextSize = isMobile ? 'sm' : 'md';
   const iconSize = isMobile ? 'sm' : 'md';
   const showWinnerIndicator = fightStatus === 'Finished' && isWinner;
 
@@ -45,18 +46,25 @@ function FighterDisplay({ fighter, fightStatus, isWinner }: FighterDisplayProps)
       >
         {avatarContent}
       </Indicator>
-      <Group justify="center" align="center" gap={4} mt="sm" wrap="nowrap">
-        <Text ta="center" fw={700} size={nameTextSize}>
-          {fighter.name}
-        </Text>
-        {fighter.instagramUrl && (
-          <Anchor href={fighter.instagramUrl} target="_blank" rel="noopener noreferrer" display="inline-block" >
-            <ActionIcon variant="subtle" color="gray" size={iconSize} radius="md" aria-label={`${fighter.name} Instagram`}>
-              <IconBrandInstagram stroke={1.3} />
-            </ActionIcon>
-          </Anchor>
+      <Stack align="center" gap={2} mt="xs">
+        <Group justify="center" align="center" gap={4} wrap="nowrap">
+          <Text ta="center" fw={700} size={nameTextSize} lh={1.2}>
+            {fighter.name}
+          </Text>
+          {fighter.instagramUrl && (
+            <Anchor href={fighter.instagramUrl} target="_blank" rel="noopener noreferrer" display="inline-block" >
+              <ActionIcon variant="subtle" color="gray" size={iconSize} radius="md" aria-label={`${fighter.name} Instagram`}>
+                <IconBrandInstagram stroke={1.3} />
+              </ActionIcon>
+            </Anchor>
+          )}
+        </Group>
+        {fighter.realName && (
+          <Text ta="center" fz={realNameTextSize} fw={400}>
+            {fighter.realName}
+          </Text>
         )}
-      </Group>
+      </Stack>
     </Stack>
   );
 }
@@ -89,20 +97,20 @@ export default function FightCard({ fight }: { fight: Fight }) {
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Stack gap="xs" align="center" mb="lg">
-         {isDraw && <Badge color="gray" size="lg" radius="sm">REMIS</Badge>}
-         {isCancelled && <Badge color="red" size="lg" radius="sm">ODWOŁANA</Badge>}
-         {isInProgress && <Badge color="blue" size="lg" radius="sm">W TRAKCIE</Badge>}
+          {isDraw && <Badge color="gray" size="lg" radius="sm">REMIS</Badge>}
+          {isCancelled && <Badge color="red" size="lg" radius="sm">ODWOŁANA</Badge>}
+          {isInProgress && <Badge color="blue" size="lg" radius="sm">W TRAKCIE</Badge>}
 
-         {fight.category && (
-           <Text ta="center" tt="uppercase" fz="sm" fw={700} mt={isDraw || isCancelled || isInProgress ? 'xs' : 0}>
-             {fight.category}
-           </Text>
-         )}
-         {fight.details && !fight.category && (
-           <Text ta="center" c="dimmed" fz="sm" fw={500} mt={isDraw || isCancelled || isInProgress ? 'xs' : 0}>
-             {fight.details}
-           </Text>
-         )}
+          {fight.category && (
+            <Text ta="center" tt="uppercase" fz="sm" fw={700} mt={isDraw || isCancelled || isInProgress ? 'xs' : 0}>
+              {fight.category}
+            </Text>
+          )}
+          {fight.details && !fight.category && (
+            <Text ta="center" c="dimmed" fz="sm" fw={500} mt={isDraw || isCancelled || isInProgress ? 'xs' : 0}>
+              {fight.details}
+            </Text>
+          )}
       </Stack>
 
       <Grid align="flex-start">

@@ -1,5 +1,6 @@
 export interface Fighter {
   name: string;
+  realName?: string;
   image?: string;
   age?: number;
   height?: number;
@@ -59,11 +60,13 @@ export const fights: Fight[] = [
     id: 1,
     fighter1: {
         name: 'Khalifof',
+        realName: 'Kamil G.',
         image: '/images/fighter1.png',
         age: 30, height: 188, reach: 189, weight: 93, record: '8-1-0', instagramUrl: 'https://instagram.com/khalifof'
     },
     fighter2: {
         name: 'Afrykańska Maczeta',
+        realName: 'Mateusz Z.',
         image: '/images/fighter2.png',
         age: 31, height: 200, reach: 206, weight: 95, record: '4-3-0'
     },
@@ -76,11 +79,13 @@ export const fights: Fight[] = [
     id: 2,
     fighter1: {
         name: 'Azdus',
+        realName: 'Jakub Matowicki',
         image: '/images/fighter3.jpg',
         age: 28, height: 172, reach: 184, weight: 71.6, record: '2-2-0', instagramUrl: 'https://instagram.com/azdus'
     },
     fighter2: {
         name: 'Frani0',
+        realName: 'Franciszek Rusiecki',
         image: '/images/fighter4.jpg',
         age: 25, height: 185, reach: 183, weight: 112, record: '1-0-0', instagramUrl: 'https://instagram.com/frani0'
     },
