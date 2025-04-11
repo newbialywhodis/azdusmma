@@ -2,7 +2,7 @@
 
 import { Card, Grid, Text, Stack, Avatar, Group, useMantineTheme, Anchor, ActionIcon, Indicator, Badge } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { IconBrandInstagram } from '@tabler/icons-react';
+import { IconBrandInstagram, IconBrandKick, IconBrandTwitch } from '@tabler/icons-react';
 import { Fight, Fighter, FightStatus } from '../data/eventData';
 
 interface FighterDisplayProps {
@@ -58,6 +58,31 @@ function FighterDisplay({ fighter, fightStatus, isWinner }: FighterDisplayProps)
               </ActionIcon>
             </Anchor>
           )}
+          {fighter.streamUrl && (() => {
+            let StreamIcon = null;
+            let platformName = '';
+            let iconColor = 'gray';
+
+            if (fighter.streamUrl.includes('kick.com')) {
+              StreamIcon = IconBrandKick;
+              platformName = 'Kick';
+              iconColor = 'green';
+            } else if (fighter.streamUrl.includes('twitch.tv')) {
+              StreamIcon = IconBrandTwitch;
+              platformName = 'Twitch';
+              iconColor = 'violet';
+            }
+
+            if (!StreamIcon) return null;
+
+            return (
+              <Anchor href={fighter.streamUrl} target="_blank" rel="noopener noreferrer" display="inline-block">
+                <ActionIcon variant="subtle" color={iconColor} size={iconSize} radius="md" aria-label={`${fighter.name} ${platformName}`}>
+                  <StreamIcon stroke={1.3} />
+                </ActionIcon>
+              </Anchor>
+            );
+          })()}
         </Group>
         {fighter.realName && (
           <Text ta="center" fz={realNameTextSize} fw={400}>

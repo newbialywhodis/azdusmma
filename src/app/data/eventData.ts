@@ -8,6 +8,7 @@ export interface Fighter {
   weight?: number;
   record?: string;
   instagramUrl?: string;
+  streamUrl?: string;
 }
 
 export type FightStatus = 'Upcoming' | 'In Progress' | 'Finished' | 'Cancelled';
@@ -59,67 +60,101 @@ export const fights: Fight[] = [
   {
     id: 1,
     fighter1: {
-        name: 'Khalifof',
-        realName: 'Kamil G.',
-        image: '/images/fighter1.png',
-        age: 30, height: 188, reach: 189, weight: 93, record: '8-1-0', instagramUrl: 'https://instagram.com/khalifof'
+      name: 'Azdus',
+      instagramUrl: 'https://www.instagram.com/azdus_/',
+      streamUrl: 'https://kick.com/azdus',
+      age: 28, height: 173, reach: 184, weight: 71.6, record: '2-2-0',
     },
     fighter2: {
-        name: 'Afrykańska Maczeta',
-        realName: 'Mateusz Z.',
-        image: '/images/fighter2.png',
-        age: 31, height: 200, reach: 206, weight: 95, record: '4-3-0'
+      name: 'Syzmek',
+      instagramUrl: 'https://www.instagram.com/szymonpiersiak/',
+      streamUrl: 'https://kick.com/syzmek'
     },
-    details: 'Walka Wieczoru',
-    category: 'MAIN EVENT / OPEN MMA',
-    status: 'Finished',
-    result: 'Fighter1 Wins',
+    status: 'Upcoming',
   },
   {
     id: 2,
     fighter1: {
-        name: 'Azdus',
-        realName: 'Jakub Matowicki',
-        image: '/images/fighter3.jpg',
-        age: 28, height: 172, reach: 184, weight: 71.6, record: '2-2-0', instagramUrl: 'https://instagram.com/azdus'
+      name: 'Pajalock',
+      instagramUrl: 'https://www.instagram.com/pajalock/',
+      streamUrl: 'https://kick.com/pajalock'
     },
     fighter2: {
-        name: 'Frani0',
-        realName: 'Franciszek Rusiecki',
-        image: '/images/fighter4.jpg',
-        age: 25, height: 185, reach: 183, weight: 112, record: '1-0-0', instagramUrl: 'https://instagram.com/frani0'
+      name: 'Aktor',
+      instagramUrl: 'https://www.instagram.com/aktor118/',
+      streamUrl: 'https://kick.com/aktor'
     },
-    category: 'CO-MAIN EVENT / CW 81 KG',
-    status: 'In Progress',
+    status: 'Upcoming',
   },
   {
     id: 3,
     fighter1: {
-        name: 'Hejka Tu Lenka',
-        image: '/images/fighter5.jpg',
-        age: 15, height: 162, reach: 178, weight: 70, record: '3-0-0'
+      name: 'Kyuun',
+      instagramUrl: 'https://www.instagram.com/kyuun02/',
+      image: '/images/placeholder.png',
+      streamUrl: 'https://kick.com/kyuun02'
     },
     fighter2: {
-        name: 'Healthy14',
-        image: '/images/fighter6.jpg',
-        age: 15, height: 151, reach: 182, weight: 72, record: '2-1-0', instagramUrl: 'https://instagram.com/healthy14'
+      name: 'Kacpi',
+      instagramUrl: 'https://www.instagram.com/notkacpi/',
     },
-    category: 'MMA',
-    status: 'Finished',
-    result: 'Draw',
+    status: 'Upcoming',
   },
-    {
+  {
     id: 4,
-    fighter1: { name: 'Zerox', image: '/images/placeholder.png' },
-    fighter2: { name: 'Ambasador Bidula', image: '/images/placeholder.png' },
-    category: 'KICKBOXING',
-    status: 'Cancelled',
+    fighter1: {
+      name: 'Kosa',
+      instagramUrl: 'https://www.instagram.com/koska_emes/',
+    },
+    fighter2: {
+      name: 'Tahlerovsky',
+      instagramUrl: 'https://www.instagram.com/tahlerovsky/',
+    },
+    status: 'Upcoming',
   },
-   {
+  {
     id: 5,
-    fighter1: { name: 'Zawodnik C', image: '/images/placeholder.png' },
-    fighter2: { name: 'Zawodnik D', image: '/images/placeholder.png' },
-    category: 'BOXING',
+    fighter1: {
+      name: 'Nzq',
+      instagramUrl: 'https://www.instagram.com/enzecik/',
+      streamUrl: 'https://www.twitch.tv/xnzq'
+    },
+    fighter2: {
+      name: 'Trazer',
+      instagramUrl: 'https://www.instagram.com/trazer_aha/',
+    },
+    status: 'Upcoming',
+  },
+  {
+    id: 6,
+    fighter1: {
+      name: 'Drusterek',
+      instagramUrl: 'https://www.instagram.com/drusterek/',
+    },
+    fighter2: {
+      name: 'Damian',
+      instagramUrl: 'https://www.instagram.com/damian_mikolajczyk_/',
+    },
+    status: 'Upcoming',
+  },
+  {
+    id: 7,
+    fighter1: {
+      name: 'Kijek',
+    },
+    fighter2: {
+      name: 'MatiBlumert',
+    },
+    status: 'Upcoming',
+  },
+  {
+    id: 8,
+    fighter1: {
+      name: 'Zombie',
+    },
+    fighter2: {
+      name: 'Elricko',
+    },
     status: 'Upcoming',
   },
 ];
